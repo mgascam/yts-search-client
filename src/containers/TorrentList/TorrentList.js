@@ -4,6 +4,9 @@ import { selectTorrent } from '../../actions/index';
 import { bindActionCreators } from 'redux';
 
 class TorrentList extends Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
         return (
             <ul className="list-group col-sm-4">
@@ -13,25 +16,24 @@ class TorrentList extends Component {
     }
 
     renderList() {
-        return this.props.torrents.map((torrent) => {
+        return this.props.torrents.map((movie) => {
+            console.log(movie);
             return (
                 <li
-                    key={torrent.title}
+                    key={movie.title}
                     className="list-group-item"
-                    // onClick={this.props.selectTorrent.call(this, torrent)}
-                    onClick={() => this.props.selectTorrent(torrent)}
+                    onClick={() => this.props.selectTorrent(movie)}
                 >
-                    {torrent.title}
+                    {movie.title}
                 </li>
             )
         });
+
     }
 }
 
-function mapStateToProps(state) {
-    return {
-        torrents: state.torrents
-    }
+function mapStateToProps({torrents}) {
+    return { torrents }
 }
 
 function mapDispatchToProps(dispatch) {
