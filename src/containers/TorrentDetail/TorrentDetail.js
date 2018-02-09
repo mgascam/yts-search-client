@@ -14,13 +14,14 @@ class TorrentDetail extends Component {
                 <ul>
                     {this.renderTorrentLinks()}
                 </ul>
+                <p>{this.props.torrent.summary}</p>
             </div>
         )
 
     }
     renderTorrentLinks() {
         return this.props.torrent.torrents.map((torrent) => {
-            return <li><a key={torrent.quality} href={torrent.url}>{torrent.quality}</a></li>
+            return <li key={torrent.quality}><a  href={torrent.url}>{torrent.quality}</a></li>
         });
     }
 
