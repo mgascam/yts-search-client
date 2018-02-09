@@ -1,8 +1,7 @@
-export default function () {
-    return [
-        {title: 'Thor Ragnarok' },
-        {title: 'Quadrophenia' },
-        {title: 'Abogadooo' },
-        {title: 'My Girl' },
-    ];
+export default function (state = null, action) {
+    switch (action.type) {
+        default:
+            return state;
+    }
+
 }
