@@ -4,9 +4,6 @@ import { selectTorrent } from '../../actions/index';
 import { bindActionCreators } from 'redux';
 
 class TorrentList extends Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         return (
             <ul className="list-group col-sm-4">

@@ -10,10 +10,18 @@ class TorrentDetail extends Component {
             <div>
                 <h3>Details for:</h3>
                 <div>{this.props.torrent.title}</div>
+                <img src={this.props.torrent.medium_cover_image} alt=""/>
+                {this.renderTorrentLinks()}
             </div>
         )
 
     }
+    renderTorrentLinks() {
+        return this.props.torrent.torrents.map((torrent) => {
+            return <a key={torrent.quality} href={torrent.url}>{torrent.quality}</a>
+        });
+    }
+
 }
 
 function mapStateToProps(state) {

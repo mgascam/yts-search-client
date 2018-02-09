@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import TorrentList from "../../containers/TorrentList/TorrentList";
-// import TorrentDetail from "../../containers/TorrentDetail/TorrentDetail";
+import TorrentDetail from "../../containers/TorrentDetail/TorrentDetail";
 import SearchBar from "../../containers/SearchBar/SearchBar";
 
 class App extends Component {
@@ -10,7 +10,7 @@ class App extends Component {
       <div className="App">
           <SearchBar />
           <TorrentList />
-          {/*<TorrentDetail />*/}
+          <TorrentDetail />
       </div>
     );
   }
